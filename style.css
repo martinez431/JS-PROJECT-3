@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* boyish dark-blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Converter container */
+.converter-container {
+  width: min(96%, 420px);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 32px 36px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .converter-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 10px 0 5px;
+  color: #eee;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  transition: all 0.22s ease;
+}
+
+input:focus, select:focus {
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  margin-top: 18px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#result {
+  margin-top: 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  min-height: 1.2em;
+  color: #fff;
+}
+
+.links {
+  margin-top: 14px;
+}
+
+.links a {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+  transition: all 0.22s ease;
+}
+
+.links a:hover {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.25);
+}
+
+/* Home button outside container */
+a.home-link {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+a.home-link:hover {
+  background: rgba(255,255,255,0.35);
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(255,255,255,0.3);
+}
+
+/* Footer centered below */
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .converter-container {
+    width: 94%;
+    padding: 22px;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  input, select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 11px;
+  }
+
+  a.home-link {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    margin-top: 15px;
+  }
+
+  footer {
+    font-size: 0.78rem;
+  }
+}
